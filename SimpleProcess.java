@@ -37,6 +37,6 @@ public abstract class SimpleProcess {
 
 	public abstract void condicionales();
 
-	//public abstract void iterativos();
+	public abstract void iterativos();
 
 }
