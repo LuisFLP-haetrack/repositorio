@@ -1,27 +1,30 @@
-import java.security.cert.PolicyNode;
 import java.util.concurrent.*;
 
 public class FCFS extends Policy{
     int contador = 1;
-    protected int size;
-    protected int totalProcesses;
+    ///agregue el contador para ver cuantos procesos entran a la cola1
 
-    ConcurrentLinkedQueue<SimpleProcess> funcCola = new ConcurrentLinkedQueue<>();
-
-    public FCFS(int size, int totalProcesses){
-        this.contador = 1;
-
-        this.size = size;
-        this.totalProcesses = totalProcesses;
+    public FCFS(SimpleProcess[] processes){
+        super(processes);
         
     }
 
-    public void meterCola(int cont){
-        this.contador = cont;
-        while(true){
-            funcCola.add(cont++);
-        }
+    
+    @Override
+    protected void elementos(){
+
     }
+
+    @Override
+    protected void elementosTotal(){
+
+    }
+
+    @Override
+    protected void sacadoTotal(){
+
+    }
+
 //no creo que sea necesario sacar de la cola creo
     /**public void sacarCola(int size){
        dequeue(this.contador); 

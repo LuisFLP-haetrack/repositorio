@@ -1,3 +1,7 @@
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.*;
+
 /** 
 	Esta clase representa la definicion abstracta de una politica de
         calendarizacion, la cual representa la "cola" en la que se
@@ -7,6 +11,15 @@
 	@author Ing. Andrea Quan
 **/
  public abstract class Policy implements Enqueable {
+	/**aqui iran las cosas que yo agregue  */
+
+	protected ConcurrentLinkedQueue<SimpleProcess> cola1 = new ConcurrentLinkedQueue<>();
+
+	protected SimpleProcess[] processes;
+
+
+
+	////////////////////////
 	/** El campo size va a representar el numero de procesos activos, 
 	es decir, en la cola actualmente, en este momento 
         **/
@@ -37,4 +50,10 @@
 	public final int totalProcesses() {
 		return totalProcesses;
 	}
+//////////////////////////////////////////
+	protected abstract void elementos();
+
+	protected abstract void elementosTotal();
+	 
+	protected abstract void sacadoTotal();
 }
