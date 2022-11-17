@@ -6,11 +6,6 @@
 
 	@author Ing. Andrea Quan
 **/
-	
-package scheduler.scheduling.policies;
-
-import scheduler.processing.SimpleProcess;
-	
  public abstract class Policy implements Enqueable {
 	/** El campo size va a representar el numero de procesos activos, 
 	es decir, en la cola actualmente, en este momento 
@@ -22,7 +17,6 @@ import scheduler.processing.SimpleProcess;
 	/**
 		Inicializa el Policy con size = 0 y totalProcesses = 0.
 	**/		
-	
 	public Policy() {
 		this.size = 0;
 		this.totalProcesses = 0;

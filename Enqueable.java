@@ -4,11 +4,6 @@
 
 	@author Ing. Andrea Quan
 **/
-	
-package scheduler.scheduling.policies;
-
-import scheduler.processing.SimpleProcess;
-	
 public interface Enqueable {
 	/** ingresa un proceso a la cola de procesos de la politica
             @param p Proceso a ingresar en la cola de la politica 
