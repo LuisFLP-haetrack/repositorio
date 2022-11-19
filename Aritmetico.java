@@ -1,9 +1,14 @@
+import java.io.*;
+
 public class Aritmetico extends SimpleProcess{
+    
     protected int id;
-    
-    public Aritmetico(int id){
-        super(id);
-    
+    protected int tiempo;
+
+    public Aritmetico(int id, int tiempo){
+        super(id, tiempo);
+        //ProcessSchedule tiempo = new ProcessSchedule();
+        this.tiempo = args[2];
     }
     @Override
     public void aritmetico(){
@@ -15,5 +20,11 @@ public class Aritmetico extends SimpleProcess{
         }
 
     }
+
+    public static void run(int tiempo){
+        this.tiempo = tiempo;
+        Thread.sleep(tiempo);
+    }
+
 
 }

@@ -13,6 +13,8 @@ public abstract class SimpleProcess {
 		Inicializa el SimpleProcess con un id especifico.
 		@param id representa el id que se le asigna al SimpleProcess
 	**/	
+	protected int tiempo;
+
 	public SimpleProcess(int id){
 		this.id = id;
 	}
@@ -38,5 +40,6 @@ public abstract class SimpleProcess {
 	public abstract void condicionales();
 
 	public abstract void iterativos();
+
 
 }
